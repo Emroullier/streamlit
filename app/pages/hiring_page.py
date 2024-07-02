@@ -45,4 +45,3 @@ def app():
         st.write(ranking_df)
     else:
         st.write("Waiting for input...")
-Update app.py
