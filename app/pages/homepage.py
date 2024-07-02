@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-t.write('# This is the homepage')
+st.write('# This is the homepage')
 
 st.set_page_config(page_title="HR Data analytics")
 
