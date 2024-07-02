@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.write('# This is EDA page')
-st.title("Exploratory Data Analysis")
+st.title("EDA Page")
+st.write("Welcome to the EDA Page!")
