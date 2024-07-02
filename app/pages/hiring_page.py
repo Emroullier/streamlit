@@ -4,6 +4,10 @@ import pandas as pd
 import json
 from io import StringIO
 
+def app():
+    st.title("Hiring Page")
+    st.write("Welcome to the Hiring Page!")
+
 st.markdown(
     """ # Support to HR decisions in new hiring
     ## Based on job opening requirements and applicant's information, which applicant is more likely to stay in the company ?

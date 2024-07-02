@@ -4,6 +4,10 @@ import pandas as pd
 import json
 from io import StringIO
 
+def app():
+    st.title("Leaving Page")
+    st.write("Welcome to the Leaving Page!")
+
 st.markdown(
     """ # Analysing HR data to predict and improve employee attrition rates.
     What is the probability that your current employee will leave the company, and what are the main factors due to influence this decision ?
