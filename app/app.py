@@ -10,8 +10,8 @@ st.markdown(
 
 )
 
-st.image('url')
-url =
+url = "https://netchex.com/wp-content/uploads/2022/12/HR-Analytics.png"
+st.image(url)
 
 homepage = st.Page("pages/homepage.py", title="Homepage")
 EDA_page = st.Page("pages/EDA_page.py", title="EDA")
