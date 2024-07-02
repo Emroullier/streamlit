@@ -20,5 +20,3 @@ leaving_page = st.Page("pages/leaving_page.py", title="Leaving")
 
 pg = st.navigation([homepage, EDA_page, hiring_page, leaving_page])
 pg.run()
-
-st.write('# This is EDA page')
