@@ -2,21 +2,35 @@ import streamlit as st
 import requests
 import pandas as pd
 import json
-# from io import StringIO
-
-#############################
-# Removed title and subtitle
-#############################
 
 st.markdown(
     """
-    # Analysing HR data to predict and improve employee attrition rates.
-    What is the probability that your current employee will leave the company, and what are the main factors that influence this decision?
-    """
+    <style>
+    .title {
+        text-align: center;
+    }
+    .subtitle {
+        text-align: center;
+        color: gray;
+        font-size: 1.5em;
+    }
+    .first-sentence {
+        text-align: left;
+        margin-top: 20px;
+        font-size: 1.2em;
+    }
+    </style>
+    <h1 class="title">Support HR Decisions of Current Employees</h1>
+    <h2 class="subtitle">Determine the probability of a current employee leaving
+    the company and the main factors influencing their decision.</h2>
+    """,
+    unsafe_allow_html=True
 )
 
 # ************************** Connection to API ***************************************
-uploaded_file = st.file_uploader("Upload a JSON file")
+st.markdown('<p class="header-text no-space">Please upload the JSON file below</p>', unsafe_allow_html=True)
+
+uploaded_file = st.file_uploader("")
 
 if uploaded_file is not None:
     # To read file as bytes:
@@ -38,4 +52,4 @@ if uploaded_file is not None:
     ranking_df = pd.DataFrame(ranking['Ranking'])
     st.write(ranking_df)
 else:
-    st.write("Waiting for input...")
+    st.markdown('<p class="header-text">No File Uploaded</p>', unsafe_allow_html=True)
