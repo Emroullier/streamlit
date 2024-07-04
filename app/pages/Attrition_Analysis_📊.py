@@ -131,7 +131,7 @@ if plot == "Number of projects":
     # **************************************************************************************
 
 
-if plot == "Step counts":
+if plot == "Remote work percentage":
     # ************************** Connection to API ***************************************
     # api-endpoint
     URL = "https://hrdataanalytics-4bdr2jy2qa-od.a.run.app/plot_step_count"
