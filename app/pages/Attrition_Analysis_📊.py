@@ -1,7 +1,15 @@
 import streamlit as st
+<<<<<<< HEAD
 import requests
 
 markdown_1="""
+=======
+# import requests
+# from PIL import Image
+# import io
+
+style_markdown = """
+>>>>>>> f4972124331efa32a808abca08f35f20818eabec
     <style>
     .title {
         text-align: center;
@@ -32,25 +40,48 @@ markdown_1="""
     </style>
     <h1 class="title">Attrition Rate Analysis</h1>
     <h2 class="subtitle">Why are your employees leaving your company?</h2>
+    """
+
+
+first_div_markdown="""
     <h3 class="section-header">Key Factors Affecting Attrition</h3>
     <div class="numbered-list">
     """
 
 markdown_2="""
     </div>
+    """
+second_div_markdown="""
     <h4 class="section-header">Employee Profiling</h4>
     <div class="numbered-list">
-        <ol>
-            <li>I assume graphs</li>
+        <ol>"""
+image_1="""
+            <li>Employee Retetion</li>
+            <br>
+        """
+employee_rentention = "./app/images/employee_retention.png"
+
+image_2="""
             <li>.</li>
+            <br>
+        """
+image_3="""
             <li>.</li>
+            <br>
+        """
+image_4="""
             <li>.</li>
+            <br>
+        """
+image_5="""
             <li>.</li>
+            <br>
         </ol>
     </div>
     """
 
 
+<<<<<<< HEAD
 st.markdown(markdown_1, unsafe_allow_html=True)
 
 plot = st.radio(
@@ -150,3 +181,32 @@ if plot == "Step counts":
     # **************************************************************************************
 
 st.markdown(markdown_2, unsafe_allow_html=True)
+=======
+st.markdown(style_markdown, unsafe_allow_html=True)
+st.markdown(first_div_markdown, unsafe_allow_html=True)
+st.markdown(second_div_markdown, unsafe_allow_html=True)
+st.markdown(image_1, unsafe_allow_html=True)
+st.image(employee_rentention, caption="Employee Retention Graph")
+st.markdown(image_2, unsafe_allow_html=True)
+st.markdown(image_3, unsafe_allow_html=True)
+st.markdown(image_4, unsafe_allow_html=True)
+st.markdown(image_5, unsafe_allow_html=True)
+
+# # Code for the request that doesn't require any input and returns an image
+# st.markdown('<p class="header-text no-space">Execute to display the image</p>', unsafe_allow_html=True)
+
+
+# # API endpoint for the image
+# IMAGE_URL = "https://hrdataanalytics-4bdr2jy2qa-od.a.run.app/plot_feature_importance"
+
+# # Sending GET request to get the image
+# response = requests.post(IMAGE_URL)
+
+# if response.status_code == 200:
+#     # Read the image from the response
+#     image = Image.open(io.BytesIO(response.content))
+#     st.image(image, caption="Generated Image")
+# else:
+#     st.write("Failed to retrieve the image")
+#     st.write(f"Response status code: {response.status_code}")
+>>>>>>> f4972124331efa32a808abca08f35f20818eabec
