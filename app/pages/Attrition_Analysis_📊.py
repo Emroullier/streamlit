@@ -1,8 +1,7 @@
 import streamlit as st
 import requests
 
-st.markdown(
-    """
+markdown_1="""
     <style>
     .title {
         text-align: center;
@@ -35,13 +34,9 @@ st.markdown(
     <h2 class="subtitle">Why are your employees leaving your company?</h2>
     <h3 class="section-header">Key Factors Affecting Attrition</h3>
     <div class="numbered-list">
-        <ol>
-            <li>Top 5 most important according to model</li>
-            <li>.</li>
-            <li>.</li>
-            <li>.</li>
-            <li>.</li>
-        </ol>
+    """
+
+markdown_2="""
     </div>
     <h4 class="section-header">Employee Profiling</h4>
     <div class="numbered-list">
@@ -53,9 +48,10 @@ st.markdown(
             <li>.</li>
         </ol>
     </div>
-    """,
-    unsafe_allow_html=True
-)
+    """
+
+
+st.markdown(markdown_1, unsafe_allow_html=True)
 
 plot = st.radio(
     "Choose your graph",
@@ -152,3 +148,5 @@ if plot == "Step counts":
                 channels="RGB",
                 output_format="PNG")
     # **************************************************************************************
+
+st.markdown(markdown_2, unsafe_allow_html=True)
