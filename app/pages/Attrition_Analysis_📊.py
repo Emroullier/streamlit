@@ -38,22 +38,13 @@ markdown_1="""
 markdown_2="""
     </div>
     <p>
-    This section allows you to explore different data visualization graphs.
-    We wanted to provide, through 3 type of plots, a clear way to understand which data impact the employees retention and how.
+    This section allows you to explore different data visualization graphs. It provides a clear way to
     <br>
-    Although there are a lot of graphs we decided to make a selection to present you what we need to retain from our analysis.
+    understand what features currently impact employee retention.
     <br>
     Feel free to explore our selection of violin, barplots and histograms graphs.
     </p>
     <h4 class="section-header">Visualization plots analysis</h4>
-    <div class="numbered-list">
-        <ol>
-            <li>Average monthly hours in violin shape</li>
-            <li>Number of project distribution</li>
-            <li>Histogram of the time spent in the company</li>
-            <li>.</li>
-            <li>.</li>
-        </ol>
     </div>
     """
 
