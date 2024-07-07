@@ -1,65 +1,23 @@
 import streamlit as st
 import requests
 
-markdown_1="""
-    <style>
-    .title {
-        text-align: center;
-    }
-    .subtitle {
-        text-align: center;
-        color: gray;
-        font-size: 1.5em;
-    }
-    .section-header {
-        text-align: left;
-        margin-top: 20px;
-        font-size: 1.3em;
-        font-weight: bold;
-    }
-    .numbered-list {
-        text-align: left;
-        margin-top: 10px;
-        font-size: 1.2em;
-    }
-    .numbered-list ol {
-        list-style-position: inside;
-        padding-left: 0;
-    }
-    .numbered-list li {
-        margin-bottom: 5px;
-    }
-    </style>
-    <h1 class="title">Attrition Rate Analysis</h1>
-    <h2 class="subtitle">Why are your employees leaving your company?</h2>
-    <h3 class="section-header">Key Factors Affecting Attrition</h3>
-    <div class="numbered-list">
-    """
-
 markdown_2="""
-    </div>
     <h4 class="section-header">Employee Profiling</h4>
-    <div class="numbered-list">
-        <ol>
-            <li>I assume graphs</li>
-            <li>.</li>
-            <li>.</li>
-            <li>.</li>
-            <li>.</li>
-        </ol>
-    </div>
     """
 
 st.markdown(markdown_2, unsafe_allow_html=True)
 
 st.write("Most important features determining employee status")
-# Mettre ici feature importance en image statique
+
+# Display static image of top important features from Random Forest
+image_feature_imp = "app/images/feature_importance.png"
+st.image(image_feature_imp)
 
 st.write("----------------------------")
 
 st.write("Plots with features influencing employee status in company")
 
-#Choose the kind of plot
+# Choose the kind of plot
 option_plot = st.selectbox(
     "**What type of plot ?**",
     ('violin', 'crosstab', 'hist'),
@@ -93,7 +51,7 @@ option_final = st.selectbox(
     key='option_final'
     )
 
-# ************************** Connection to API : Violin plots ***************
+# ************************** Connection to API *****************************
 # api-endpoint
 URL = f"https://hrdataanalytics-4bdr2jy2qa-od.a.run.app/{endpoint}"
 params = {'input' : option_final}
@@ -109,9 +67,10 @@ st.image(r.content,
             output_format="PNG")
 # ***************************************************************************
 
-#Mettre fig Felix KMeans 3 clusters en statique
-#png here
-st.write("Employee profiles (Kmeans with 3 clusters)")
+# Display of Kmeans picture
+st.write("Employee profiles")
+image_feature_imp = "app/images/Employee_groups.png"
+st.image(image_feature_imp)
 st.write("0. Employees with an average mean score in the top 5 important features who are still in company.")
 st.write("1. Employees with an high mean score in the top 5 important features who left in company.")
 st.write("2. Employees with a low mean score in the top 5 important features who left in company.")
