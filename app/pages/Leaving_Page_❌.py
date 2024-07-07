@@ -30,7 +30,9 @@ st.markdown(
 # ************************** Connection to API ***************************************
 st.markdown('<p class="header-text no-space">Please upload the JSON file below</p>', unsafe_allow_html=True)
 
-uploaded_file = st.file_uploader("")
+# Do not modify label please (no empty value + label_visibility = 'hidden')
+label ="Upload a json file"
+uploaded_file = st.file_uploader(label, label_visibility = "hidden")
 
 if uploaded_file is not None:
     # To read file as bytes:
