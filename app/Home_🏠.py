@@ -21,8 +21,14 @@ st.markdown(
     </style>
     <h1 class="title">HR Data Analytics</h1>
     <h2 class="subtitle">Predicting and improving employee attrition rates.</h2>
+
     <p class="first-sentence"> Determine the probability of a current employee leaving your company & </p>
     <p class="first-sentence">the main factors influencing attrition.</p>
+
+    <p class="first-sentence"> 1. Understanding why our best and most experienced employees are leaving prematurely </p>
+    <p class="first-sentence"> 2. Improving hiring based on attrition analysis and predictions. </p>
+    <p class="first-sentence"> 3. Employee profiles with a low top 5 important features. </p>
+
     """,
     unsafe_allow_html=True
 )

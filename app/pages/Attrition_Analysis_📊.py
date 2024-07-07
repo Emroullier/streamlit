@@ -52,7 +52,12 @@ markdown_2="""
 
 st.markdown(markdown_2, unsafe_allow_html=True)
 
+st.write("Most important features determining employee status")
+# Mettre ici feature importance en image statique
+
 st.write("----------------------------")
+
+st.write("Plots with features influencing employee status in company")
 
 #Choose the kind of plot
 option_plot = st.selectbox(
@@ -74,8 +79,6 @@ if option_plot == 'crosstab':
     endpoint = 'plot_crosstab'
     selection = ('Gender',
                 'promotion_last_5years',
-                'Work_accident',
-                'Rising_Star',
                 'Percent_Remote',
                 'number_project',
                 'salary')
@@ -105,3 +108,10 @@ st.image(r.content,
             channels="RGB",
             output_format="PNG")
 # ***************************************************************************
+
+#Mettre fig Felix KMeans 3 clusters en statique
+#png here
+st.write("Employee profiles (Kmeans with 3 clusters)")
+st.write("0. Employees with an average mean score in the top 5 important features who are still in company.")
+st.write("1. Employees with an high mean score in the top 5 important features who left in company.")
+st.write("2. Employees with a low mean score in the top 5 important features who left in company.")
