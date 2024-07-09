@@ -18,13 +18,21 @@ st.markdown(
     }
     </style>
     <h1 class="title">Team members </h1>
+    <br>
+    <br>
+
     """,
     unsafe_allow_html=True
 )
 
 
-st.write("Emily ANDERSON + contact")
-st.write("Felix HABERL + contact")
-st.write("Louis GOKELAERE + contact")
-st.write("Sarah DIETHELM + contact")
-st.write("Thierry CAROLE + contact")
+st.image("app/images/Emily.jpg", width=200)
+st.write("Emily ANDERSON")
+st.image("app/images/Felix.jpg", width=200)
+st.write("Felix HABERL")
+st.image("app/images/Louis.jpg", width=200)
+st.write("Louis GOKELAERE")
+st.image("app/images/Sarah.jpg", width=200)
+st.write("Sarah DIETHELM")
+st.image("app/images/Thierry.jpg", width=200)
+st.write("Thierry CAROLE")

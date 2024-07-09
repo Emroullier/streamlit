@@ -44,22 +44,28 @@ markdown_2="""
     <br>
     Feel free to explore our selection of violin, barplots and histograms graphs.
     </p>
+"""
+markdown_3="""
     <h4 class="section-header">Visualization plots analysis</h4>
+    <p>Our analysis indicates that the following 5 features influence employee attrition rates the most :</p>
+    <div class="numbered-list">
+        <ol>
+            <li>Stepcount</li>
+            <li>Number of project</li>
+            <li>Last evaluation</li>
+            <li>Average monthly hours</li>
+            <li>Sensor heartbeat</li>
+        </ol>
     </div>
-    """
+"""
 
+# Data Visualization and Understanding
 st.markdown(markdown_1, unsafe_allow_html=True)
 st.markdown(markdown_2, unsafe_allow_html=True)
-
 st.write("Most important features determining employee status")
-
-# Display static image of top important features from Random Forest
 image_feature_imp = "app/images/feature_importance.png"
 st.image(image_feature_imp)
-
-st.write("----------------------------")
-
-st.write("Plots with features influencing employee status in company")
+st.markdown(markdown_3, unsafe_allow_html=True)
 
 # Choose the kind of plot
 option_plot = st.selectbox(
