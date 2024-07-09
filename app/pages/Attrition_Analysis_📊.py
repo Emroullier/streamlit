@@ -38,13 +38,14 @@ markdown_1="""
 markdown_2="""
     </div>
     <p>
-    This section allows you to explore different data visualization graphs.
-    We wanted to provide, through 3 type of plots, a clear way to understand which data impact the employees retention and how.
+    This section allows you to explore different data visualization graphs. It provides a clear way to
     <br>
-    Although there are a lot of graphs we decided to make a selection to present you what we need to retain from our analysis.
+    understand what features currently impact employee retention.
     <br>
     Feel free to explore our selection of violin, barplots and histograms graphs.
     </p>
+"""
+markdown_3="""
     <h4 class="section-header">Visualization plots analysis</h4>
     <div class="numbered-list">
         <ol>
@@ -57,12 +58,15 @@ markdown_2="""
     </div>
     """
 
+# Data Visualization and Understanding
 st.markdown(markdown_1, unsafe_allow_html=True)
 st.markdown(markdown_2, unsafe_allow_html=True)
+st.write("Most important features determining employee status")
+image_feature_imp = "app/images/feature_importance.png"
+st.image(image_feature_imp)
+st.markdown(markdown_3, unsafe_allow_html=True)
 
-st.write("----------------------------")
-
-#Choose the kind of plot
+# Choose the kind of plot
 option_plot = st.selectbox(
     "**What type of plot ?**",
     ('Violin', 'Crosstab', 'Hist'),
@@ -82,8 +86,6 @@ if option_plot == 'Crosstab':
     endpoint = 'plot_crosstab'
     selection = ('Gender',
                 'promotion_last_5years',
-                'Work_accident',
-                'Rising_Star',
                 'Percent_Remote',
                 'number_project',
                 'salary')
@@ -113,3 +115,11 @@ st.image(r.content,
             channels="RGB",
             output_format="PNG")
 # ***************************************************************************
+
+# Display of Kmeans picture
+st.write("Employee profiles")
+image_feature_imp = "app/images/Employee_groups.png"
+st.image(image_feature_imp)
+st.write("0. Employees with an average mean score in the top 5 important features who are still in company.")
+st.write("1. Employees with an high mean score in the top 5 important features who left in company.")
+st.write("2. Employees with a low mean score in the top 5 important features who left in company.")
